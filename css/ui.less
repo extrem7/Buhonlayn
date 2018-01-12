@@ -1,0 +1,60 @@
+@green: #008e68;
+.size(@w, @h: @w) {
+  height: @h;
+  width: @w;
+}
+
+.transition(@e) {
+  transition: @e .3s ease-in-out;
+}
+
+body, html {
+  cursor: default;
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
+  font-family: "PF DinText Pro";
+  font-size: 18px;
+  color: #4d4d4d;
+}
+
+body {
+  &.stop {
+    overflow-x: hidden;
+    height: 100vh;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: block;
+  cursor: pointer;
+}
+
+.toggle-btn {
+  z-index: 100501;
+  background: transparent;
+  border: none;
+  outline: 0;
+  margin: 0 0 0 60px;
+  .icon-bar {
+    display: block;
+    width: 30px;
+    margin-bottom: 4px;
+    height: 3px;
+    background-color: @green;
+    border-radius: 32px;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.cbalink {
+  display: none !important;
+}
